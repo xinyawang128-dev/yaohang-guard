@@ -1,0 +1,7 @@
+{
+  "scenario": "closure",
+  "config": {},
+  "event": {
+    "type": "closure"
+  }
+}

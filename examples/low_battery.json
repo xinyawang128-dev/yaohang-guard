@@ -1,0 +1,7 @@
+{
+  "scenario": "low_battery",
+  "config": {
+    "battery_wh": 55
+  },
+  "event": null
+}

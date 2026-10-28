@@ -1,0 +1,8 @@
+{
+  "scenario": "wind",
+  "config": {},
+  "event": {
+    "type": "wind",
+    "value": 6
+  }
+}

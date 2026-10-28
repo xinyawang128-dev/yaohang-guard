@@ -1,0 +1,7 @@
+{
+  "scenario": "sensor_failure",
+  "config": {},
+  "event": {
+    "type": "sensor_failure"
+  }
+}

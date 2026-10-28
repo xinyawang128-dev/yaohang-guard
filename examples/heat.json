@@ -1,0 +1,7 @@
+{
+  "scenario": "heat",
+  "config": {
+    "ambient_c": 38
+  },
+  "event": null
+}

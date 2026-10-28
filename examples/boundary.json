@@ -1,0 +1,7 @@
+{
+  "scenario": "boundary",
+  "config": {
+    "deadline_min": 12
+  },
+  "event": null
+}
