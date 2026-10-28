@@ -1,0 +1,233 @@
+[
+  {
+    "name": "create_task",
+    "description": "Create a persistent synthetic delivery task. Supply case_id for competition test collection; returns actual task_id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "case_id": {
+          "type": "string",
+          "enum": [
+            "normal",
+            "closure",
+            "boundary",
+            "sensor_failure",
+            "wind",
+            "low_battery",
+            "heat",
+            "custom"
+          ]
+        },
+        "config": {
+          "type": "object",
+          "description": "Optional synthetic engine.DEFAULT settings"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "plan_candidates",
+    "description": "Enumerate routes and packaging from the current shared task state; validate 8 uncertainty corners.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Actual task_id returned by this service create_task",
+          "pattern": "^[a-f0-9]{12}$"
+        }
+      },
+      "required": [
+        "task_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "simulate_plan",
+    "description": "Validate the full remaining route before executing; packaging is fixed after departure.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Actual task_id returned by this service create_task",
+          "pattern": "^[a-f0-9]{12}$"
+        },
+        "route": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "R"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 8
+        },
+        "pack": {
+          "type": "string",
+          "enum": [
+            "standard",
+            "enhanced"
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "route",
+        "pack"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "execute_step",
+    "description": "Advance exactly one edge of the full remaining route to D; retain physical state in the shared store.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Actual task_id returned by this service create_task",
+          "pattern": "^[a-f0-9]{12}$"
+        },
+        "route": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "R"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 8
+        },
+        "pack": {
+          "type": "string",
+          "enum": [
+            "standard",
+            "enhanced"
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "route",
+        "pack"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "inject_event",
+    "description": "Inject a simulated fault into this task. closure: value=\"R-D\"; wind: numeric value=6 m/s; sensor_failure: omit value. Returns physical state and changed event conditions. Retains the current position and resources.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Actual task_id returned by this service create_task",
+          "pattern": "^[a-f0-9]{12}$"
+        },
+        "event_type": {
+          "type": "string",
+          "enum": [
+            "closure",
+            "wind",
+            "sensor_failure"
+          ]
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "task_id",
+        "event_type"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "abort_task",
+    "description": "Stop the shared simulation task with an explicit reason.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Actual task_id returned by this service create_task",
+          "pattern": "^[a-f0-9]{12}$"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "task_id",
+        "reason"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "verify_delivery",
+    "description": "Read current shared state; missing temperature sensor cannot validate delivery.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Actual task_id returned by this service create_task",
+          "pattern": "^[a-f0-9]{12}$"
+        }
+      },
+      "required": [
+        "task_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "export_evidence",
+    "description": "Export actual simulation history and SHA256; attach an external AGH transcript to prove model execution.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Actual task_id returned by this service create_task",
+          "pattern": "^[a-f0-9]{12}$"
+        }
+      },
+      "required": [
+        "task_id"
+      ],
+      "additionalProperties": false
+    }
+  }
+]

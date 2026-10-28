@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+agh_connection.json
+data/
+evidence/
+submission/
+*.sqlite3
+*.zip

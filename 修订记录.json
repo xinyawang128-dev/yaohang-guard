@@ -1,0 +1,198 @@
+{
+  "version": "2.0.1",
+  "original_zip_sha256": "b48cb27796ba72b6c7017de062b197b4e7dc8d4b60019786a645a89486c1b43b",
+  "changes": [
+    {
+      "path": "README.md",
+      "change": "modified",
+      "sha256": "2caa4e4f76d190df64335ff351e9e6ff5f31bf3180378f6f2db3eddaf816d842"
+    },
+    {
+      "path": "agh_common.py",
+      "change": "modified",
+      "sha256": "898f9ba9b61620348961f4ab987ab2d370e9df783b8d53c3053effd1184e0b30"
+    },
+    {
+      "path": "agh_evidence.py",
+      "change": "modified",
+      "sha256": "a029e918aff39424ccf36c51b0b6fa69d2d0e078037e4c9de701f25fa512437e"
+    },
+    {
+      "path": "cases.py",
+      "change": "modified",
+      "sha256": "20a4479afd73c449fdf05fa758d4b9551c797d8e31a6fb1759387864002065d3"
+    },
+    {
+      "path": "check_agh.py",
+      "change": "modified",
+      "sha256": "de61c07f20e5bd8e2da0987370e2ec255094479e6037abefd9a0c7770d0a14cc"
+    },
+    {
+      "path": "check_engine.py",
+      "change": "added",
+      "sha256": "237d35074463106c52acfcbcbf304784fec17f11c76e7e3ea22bc49c9e12f475"
+    },
+    {
+      "path": "check_infrastructure.py",
+      "change": "modified",
+      "sha256": "83cafeffb1d307912f0a9d2f8f361954e057c97d49a9fbd7e268da94c834dbcc"
+    },
+    {
+      "path": "check_project.py",
+      "change": "modified",
+      "sha256": "f0432360bf9b2e2110317b7d808412492454414fb888aed2fd9fc0466a49e61a"
+    },
+    {
+      "path": "check_web.py",
+      "change": "added",
+      "sha256": "b212dd6a7f58108d78da560e23cf331e7aa2d96638edb78f5b8a0da559c6bf9f"
+    },
+    {
+      "path": "collect_results.py",
+      "change": "modified",
+      "sha256": "49633aa6788f0ac25ed5a90ada43a0aac93a0590eb4556fcdcefd75fa5e493f1"
+    },
+    {
+      "path": "docs/AGH接入与取证.md",
+      "change": "modified",
+      "sha256": "f540a56f73d7b7462503f3340c2fa415b6f4a28a03c408e801d9782f7386e72d"
+    },
+    {
+      "path": "docs/工程验证报告.pdf",
+      "change": "added",
+      "sha256": "8ee37457bb906d1b6e7a6f6fb4d2ba42986a6cd670f7f3035298cf97c578054b"
+    },
+    {
+      "path": "docs/提交信息填写说明.md",
+      "change": "modified",
+      "sha256": "1dea1d144ce78a4fb05f1f0bbb486548a31ef12ebbe12344de278d3e091a2de8"
+    },
+    {
+      "path": "docs/演示视频脚本.md",
+      "change": "modified",
+      "sha256": "b23c125edd75e36ee130b7f39443f034386633bf77ec8f057640bf6aa0c23890"
+    },
+    {
+      "path": "docs/项目说明.md",
+      "change": "modified",
+      "sha256": "61f2aedadd41b377fe500240d6ffbc5a8bdd909bbf03c2cf4777ef2e791c5d34"
+    },
+    {
+      "path": "docs/项目说明.pdf",
+      "change": "added",
+      "sha256": "8fcbdf4fe0f90d094fb5fb9e5832e3f6c8b67e2e92dde7ef4cae74fae58e1407"
+    },
+    {
+      "path": "engine.py",
+      "change": "modified",
+      "sha256": "cc0a80234b092141322dd181b88931654eecdaf8c498ed5a17aff7f3cb261a8a"
+    },
+    {
+      "path": "export_agh_session.py",
+      "change": "modified",
+      "sha256": "39c9acadb8dc5c589da7046ef71991c5d62f93ccc4bdace353aa95cad1f39766"
+    },
+    {
+      "path": "mcp_runtime.py",
+      "change": "modified",
+      "sha256": "9f15fb331dfef65fa9e6d7689b58f633866a5307e2e6ea775992f96beaa014f9"
+    },
+    {
+      "path": "project_info.py",
+      "change": "added",
+      "sha256": "253a069fa61c4477ad8f2a0a118cf794d1495aeb6d295931eab21cd9c4ce5d8b"
+    },
+    {
+      "path": "register_agh.py",
+      "change": "modified",
+      "sha256": "1d92bedd3617a43decc70c7a76b4b9809b622395eba2f548ed085305def88b81"
+    },
+    {
+      "path": "run.py",
+      "change": "added",
+      "sha256": "0744509549e90eaf2e791e08faf592a8d78b9efe0e803545f5ad4bdf48389bcc"
+    },
+    {
+      "path": "run_checks.py",
+      "change": "modified",
+      "sha256": "d71a5635dbdcbbfdceb97115cac59161a5f7413de6f4cdbb96a922eb70f5b123"
+    },
+    {
+      "path": "server.py",
+      "change": "modified",
+      "sha256": "8ddaeb42a75c9b63ecaa34047b9f0969a241106681f647a3daa7fb1ec7a52e2a"
+    },
+    {
+      "path": "submission_info.json",
+      "change": "modified",
+      "sha256": "5f7da6f0b46d44627232145177d594c8180109b16293d94f5de76699b8480225"
+    },
+    {
+      "path": "task_store.py",
+      "change": "modified",
+      "sha256": "f51fbfcf46358849bfb8c560b648b1d8461a053845ffbba968314f68c3d4e0ec"
+    },
+    {
+      "path": "tests/browser_smoke.cjs",
+      "change": "added",
+      "sha256": "bf2deb80d3df3236af566f6ff458be63f41ae853e5a945961d97edd9f17645be"
+    },
+    {
+      "path": "web/app.js",
+      "change": "added",
+      "sha256": "d62d6088dd3c0b162ebf910da72b40a847a1f61699a780a7bfaa716f1aae4e64"
+    },
+    {
+      "path": "web/index.html",
+      "change": "modified",
+      "sha256": "5870bbfbe9a9ca46795a27a77261b681b9dc31edc3be7e9e62dac76449d8ff6b"
+    },
+    {
+      "path": "修订说明.txt",
+      "change": "added",
+      "sha256": "1a4819134d46edadc450d0c66f63b1fd27fb1444a12f9a0f01ae0539f05728c6"
+    },
+    {
+      "path": "先看这里.txt",
+      "change": "modified",
+      "sha256": "14414d339273c476e136d948ac280f3d21fabde6af728f81db922f08612efd16"
+    },
+    {
+      "path": "本机验证说明.txt",
+      "change": "modified",
+      "sha256": "50bdcb356af56eefc376e034114aeb95c86daa9419b17b6ee3cc94718d2033a0"
+    }
+  ],
+  "engineering_checks": {
+    "project_version": "2.0.1",
+    "scope": "local_engineering_validation_only",
+    "total_passed": 55,
+    "groups": {
+      "MCP": 10,
+      "接入与证据": 15,
+      "独立计算": 11,
+      "HTTP": 8,
+      "浏览器": 11
+    },
+    "agh_session_verified": false,
+    "model_calls_recorded_here": false,
+    "measured_hardware": false,
+    "runtime": {
+      "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+      "python_executable": "/Users/yuyaqi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "platform": "darwin"
+    },
+    "browser": "155.0.8059.39",
+    "source_sha256": {
+      "engine.py": "cc0a80234b092141322dd181b88931654eecdaf8c498ed5a17aff7f3cb261a8a",
+      "inject_event.py": "b3f968c2689fb2bffcf0839284876c87d2af00488eca78772f28c2544ceaef49",
+      "task_store.py": "f51fbfcf46358849bfb8c560b648b1d8461a053845ffbba968314f68c3d4e0ec",
+      "mcp_runtime.py": "9f15fb331dfef65fa9e6d7689b58f633866a5307e2e6ea775992f96beaa014f9",
+      "mcp_server.py": "a10afed2b04d022b372afddb974a1dda2ace8c8efdc79be29acc640415cb06d7",
+      "project_info.py": "253a069fa61c4477ad8f2a0a118cf794d1495aeb6d295931eab21cd9c4ce5d8b"
+    },
+    "browser_visual_review": "desktop and mobile screenshots inspected",
+    "document_visual_review": "all six PDF pages rendered and inspected"
+  },
+  "pending_actual_agh_evidence": true
+}
