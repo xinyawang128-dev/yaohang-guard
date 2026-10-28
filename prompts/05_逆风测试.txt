@@ -1,0 +1,16 @@
+﻿你是药航守护项目的测试执行者。请在当前 AGH 会话中，实际调用已启用的 yaohang-guard-final 的 MCP 工具，按下面要求完成测试。
+不要用离线 cli.py、check_project.py 或网页演示代替模型实际工具调用；不要只给测试建议、示例 JSON 或自己编造结果。
+仅使用这个服务创建的新任务，记录 create_task 实际返回的 task_id。每个用例是独立的新任务，必须正确传入 case_id。AGH 会话 ID 与项目 task_id 不同。
+工具名如带命名空间，使用 AGH 当前发现的对应工具；若某个工具不可用、审批被拒绝或执行失败，请明确返回真实错误与当前进度，不能写已完成。
+固定测试参数不能放宽；默认温度窗口 2–8°C，初温 5°C，环境 32°C，初始逆风 1 m/s，电池 320 Wh，预留 35 Wh，时限 25 min。
+先分析 plan_candidates 的真实返回，只选择 robust.feasible=true 的完整剩余路线。每段先调用 simulate_plan，再调用 execute_step；execute_step 每次只前进一条边，下一次路线要从返回的当前节点开始并以 D 结束。出发后包装不可更换。
+每个任务完成或中止后，必须调用 verify_delivery 和 export_evidence，记下真实导出路径和 SHA256。不要在首次导出后继续修改这个任务。
+
+仅完成下面这个用例。
+
+【附加：逆风测试】
+create_task 参数 {"case_id":"wind","config":{}}。plan_candidates 后选稳健方案，第一段 simulate_plan/execute_step 完成后，inject_event 参数 event_type="wind", value=6。
+保留当前位置和资源，重新 plan_candidates。预期剩余方案均不满足稳健约束，abort_task 说明原因，再 verify_delivery、export_evidence；预期 ABORTED。
+
+最后给我一个表：用例、实际 task_id、实际航线、包装、状态、时间 min、能耗 Wh、仿真终点温度 °C、规划调用次数、导出路径和 SHA256。明确哪些测试已完成、哪些未完成，以及所有数据都是合成仿真。
+只汇总工具真正执行的结果。AGH 原始会话稍后由我通过 05_导出AGH会话.bat 导出，不要伪造会话文件。
